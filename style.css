@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    color: white;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.button-nav{
+    display: inline;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px; 
+    /* margin-left: 40px;  */
+    cursor: pointer;
+
+}
+
+.langauge-btn{
+      display: inline-flex; 
+      align-items: center;
+      background: transparent;
+      border: 1px solid #fff;
+      padding: 7px 10px;
+}
+.langauge-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    margin-top: 10%;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px; */
+
+}
+ .header-content h2{
+     font-size: 30px;  
+     line-height: 70px; 
+      font-weight: 800;  
+      /* max-width: 650px;  */
+      /* margin-left: auto;
+      margin-right: auto;  */
+ } 
+ 
+/* .header-content h5{
+    font-weight: 400;
+    margin-bottom: 20px;
+} */
+.email-signup{
+    /* background: #fff; */
+    border-radius: 4px;
+    display: flex;
+    /* align-items: center; */
+    margin-top: 30px;
+    overflow: hidden;
+    width: 50%;
+     margin-left: auto; 
+     margin-right: auto;
+}
+.email-signup input{
+    flex: 1;
+    border: 10px   ;
+    outline: 0;
+    /* margin-left: 20px; */
+     background: #303030 ; 
+    padding: 15px 30px;
+}
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 17px 30px;
+}
+.faq{
+    text-align: center;
+    font-size: 18px;
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+     right: 20px; 
+     transition: transform 0.5s;
+} 
+ input[type="radio"]{
+    display: none;
+} 
+.accordian{
+    margin: 60px auto;
+    width: 75%;
+    /* max-width: 750px; */
+
+}
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+.accordian .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+     transition: max-height 0.5s, padding 0.5s;
+}
+.accordian input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.accordian input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.faq .email-signup{
+    /* max-width: 50%; */
+    margin: 20px auto 60px;
+
+}
+
+.faq small{
+    font-size: 13px;
+}
+/* .plus h3 ::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+} */
+
+/* footer */
+.footer{
+    border-top: 6px solid #333;
+    color: #dbd9d9;
+    width: 100%;
+    max-width: 100%; 
+}
+.footer a{
+      color: #dbd9d9;
+      font-size: 12px;
+       line-height: 30px; 
+}
+.footer p{
+    font-size: 12px;
+}
+.footer h2{
+    font-size: 16px;
+}
+.footer button{
+    font-weight: normal;
+    display: block;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+@media (max-width:800px){
+    body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .header{
+        width: 100%;
+    }
+    
+    .logo{
+        width: 100px;
+    }
+    .button-nav{
+        /* margin-left:5% ; */
+        display: flex;
+    }
+    nav button{
+        padding: 5px 10px;
+        
+    }
+    .langauge-btn{
+        display: none;
+    }
+    nav .langauge-btn{
+        padding: 4px 8px;
+       
+    }
+    
+    .email-signup{
+        /* width: 70%; */
+        font-size: 12px;
+        display: block;
+        /* padding: 10px 110px; */
+        
+    }
+    .email-signup input{
+        padding: 10px 10px;
+    }
+    .email-signup button{
+        padding: 10px 10px;
+        margin-top: 10px;
+    }
+    .header-content{
+        margin-top: 50%;
+    }
+    .faq .email-signup{
+        /* width: 70%; */
+        font-size: 12px;
+        display: block;
+        /* padding: 10px 10px; */
+    }
+    .faq h2{
+        font-size: 20px;
+
+    }
+    .accordian .content{
+        font-size: 14px;
+    }
+    .accordian li label{
+        padding: 10px;
+        font-size: 10px;
+    }
+    /* .accordian li{
+        width: 100%;
+    } */
+    label ::after{
+        font-size: 22px;
+    }
+    
+}
